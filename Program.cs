@@ -16,16 +16,15 @@ partial class Program
     protected override void Render()
     {
 
-        ImGui.Begin("Шифр одноалфавитной замены"); 
+        ImGui.Begin("Шифр RC5"); 
         
         if (ImGui.Button("Выход"))
             Close(); 
 
         ImGui.Separator(); 
 
-        ImGui.Text("Шифр квадрат Виженера");
+        
         ImGui.Text("Введите текст для зашифровки / дешифровки пишется слитно");
-        ImGui.Text("(только русские буквы)");
         ImGui.InputTextMultiline("Исходный текст", ref inputText, 1000, new Vector2(-1, ImGui.GetTextLineHeightWithSpacing() * 5));
         ImGui.Text("Введите ключевое слово");
         //ImGui.SliderInt("Сдвиг (шаг)", ref Key, 1, 32 , $"Шаг: %d");
